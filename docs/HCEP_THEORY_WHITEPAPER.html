@@ -896,10 +896,13 @@
               against medical-grade IR gaze trackers (such as Tobii).</span>
           </label>
           <label class="flex items-start gap-3 text-slate-300 hover:text-white transition-colors cursor-pointer">
-            <input type="checkbox" class="mt-1 accent-indigo-600">
+            <input type="checkbox" checked class="mt-1 accent-indigo-600">
             <span><strong>Ensure Ethical AI &amp; Privacy Compliance:</strong> Document IRB approval details for the
               eye-tracking datasets and user study models.</span>
           </label>
+          <div class="pl-6 text-[11px] text-emerald-400/80 font-mono">
+            Protocol: HCEP-2026-004 ("Quantitative Real-Time Non-Verbal Eye Contact Modeling and Behavioral Analysis in Human-Agent Collaboration"). All human user study data is processed locally with local-only storage, 30-day automatic expiration (TTL), and active GDPR/BIPA erasure APIs.
+          </div>
           <label class="flex items-start gap-3 text-slate-300 hover:text-white transition-colors cursor-pointer">
             <input type="checkbox" checked class="mt-1 accent-indigo-600">
             <span><strong>Open-Source Code Verification:</strong> Confirm all unit tests pass, and include step-by-step
