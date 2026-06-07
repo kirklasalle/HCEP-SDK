@@ -100,7 +100,21 @@ For detailed guidelines, read the [User Guide](docs/USER_GUIDE.md) and [Develope
 
 ## Licensing & Disclaimers
 
-*   **HCEP SDK (this repository):** All integration wrappers, Unity components, Unreal controllers, and Python scripts are licensed under the open-source [MIT License](LICENSE).
-*   **HCEP Core Engine (compiled runtime):** The main HCEP background application, facial feature classification neural weights, and spatial solver DLLs are proprietary software owned by Kirk LaSalle and are governed by the commercial/proprietary **HCEP End User License Agreement** included in the binary download.
+HCEP utilizes a dual-licensing hybrid model designed to protect core intellectual property while fostering open ecosystem integration:
+
+### 1. Simple Summary (Basic Level)
+*   **HCEP SDK (this repository):** All integration wrappers, Unity components, Unreal controllers, and Python scripts are licensed under the open-source [MIT License](LICENSE). Developers are free to modify, build, and distribute these SDK packages in games, robotics systems, and custom AI agents.
+*   **HCEP Core Engine (compiled runtime):** The main HCEP background application, facial feature classification neural weights, and spatial solver DLLs are proprietary software owned by Kirk LaSalle. Copying, distribution, or modification of the core desktop client requires explicit written permission.
+
+### 2. Architectural Analysis (Advanced Nerd Level)
+*   **IP Isolation Boundary:** The API boundary acts as a strict firewall between the proprietary and open-source segments:
+    *   **Proprietary Core (Closed-Source):** Contains the PnP head pose solver (Levenberg-Marquardt optimizer), Whisper.net speech transcriptions, ArcFace biometric recognizer, and the cognitive state classifiers. These reside inside the WPF application shell (`src/HCEP.App`, `src/HCEP.Kinect`, etc.).
+    *   **Open SDK (Open-Source):** Client packages communicate over platform-agnostic channels (JSON-RPC MCP over HTTP, standard REST, and high-frequency WebSockets). 
+*   **Compliance, Cryptography, and Directives:**
+    *   **Immutability Safeguard:** Ethical limits (the 10 Augmented Laws) are governed by `Permanent_Active_Directives.txt` in the core runtime. The system computes a SHA-256 hash of this file and compares it to a hardcoded signature (`1A87DA...`) on startup. If modified, the application halts and falls back to a deep safety diagnostic state.
+    *   **Encryption at Rest:** User API keys are protected using DPAPI (Data Protection API) via Windows CryptProtectData. Keys are encrypted at rest with user-scope machine-bound key blobs, ensuring configuration security.
+    *   **Biometric Data Gating:** The facial recognition logic (ArcFace) is subject to biometric compliance controls. The application enforces explicit user confirmation dialogues before extracting 512-dimensional vector representations, meeting GDPR Art. 9 and BIPA standards.
+
+---
 
 *Copyright © 2026 Kirk LaSalle. All rights reserved.*
