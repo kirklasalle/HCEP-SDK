@@ -94,6 +94,11 @@ To eliminate gaze skewing caused by off-axis sensor placement (such as mounting 
 
 ![True Gaze Parallax Calibration](docs/images/parallax_calibration.svg)
 
+### Cones of Vision & 13 Gaze Regions
+To classify communication modes, HCEP maps the user's focus direction across 13 distinct spatial sectors. The avatar casts virtual cones of vision from each eye socket, detecting mutual gaze (Spirit), social triangle transitions (Affect/Heart), forehead analytical focus (Logic), or averted gaze patterns (Think):
+
+![Telemetry Cones of Vision & 13 Regions](docs/images/cones_of_vision.svg)
+
 ### True Gaze™ Parallax Simulator
 To test the spatial gaze geometry locally without launching the app, open the **True Gaze™ Parallax Simulator**:
 1. Open the [docs/index.html](docs/index.html) file in any standard web browser.
