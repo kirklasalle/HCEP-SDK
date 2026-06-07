@@ -99,6 +99,11 @@ To classify communication modes, HCEP maps the user's focus direction across 13 
 
 ![Telemetry Cones of Vision & 13 Regions](docs/images/cones_of_vision.svg)
 
+### Three-Stage Gaze Triangulation Geometry
+HCEP's mathematical engine determines the final gaze vector in three distinct pipeline stages: (1) head-pose estimation using an Efficient Perspective-n-Point (EPnP) solver optimized with Levenberg-Marquardt, (2) 3D coordinate mapping of eyeball center sockets relative to the face mesh, and (3) spherical projection of the pupil displacement vector ($\vec{v}$):
+
+![Three-Stage Gaze Triangulation Geometry](docs/images/gaze_geometry.svg)
+
 ### True Gaze™ Parallax Simulator
 To test the spatial gaze geometry locally without launching the app, open the **True Gaze™ Parallax Simulator**:
 1. Open the [docs/index.html](docs/index.html) file in any standard web browser.
