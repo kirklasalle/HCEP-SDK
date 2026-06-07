@@ -81,6 +81,14 @@ This roadmap documents the phased path from the initial alpha codebase (v0.1.0) 
     *   [x] release packaging script (`package_release.ps1`) automated.
     *   [x] Tagged v1.0.0 release packages compiled and zipped.
 
+### Phase 7 — Autonomous Avatar Responsiveness Tuning — [COMPLETED]
+*   **Goal:** Decouple avatar movements from user pose mirroring to establish autonomous observer behaviors.
+*   **Milestones:**
+    *   [x] Head rotation decoupled from direct tracking inputs (passing Vector3.Zero to SetHeadPose).
+    *   [x] Double-projection mesh pipeline built to construct static/neutral projected face shape (NeutralFaceMeshVertices2D).
+    *   [x] 3D wireframe rendering updated to use neutral mesh, enabling independent animation float/gaze responsiveness.
+    *   [x] Isolated the Permanent Active Directives (PAD) from the responsive behavior modifications.
+
 ---
 
 ## Future Post-v1.0 Roadmap
