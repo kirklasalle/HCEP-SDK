@@ -12,7 +12,7 @@
 
 HCEP (Human Communication Eye Protocol) is a world-class, state-of-the-art real-time multi-modal perception platform that fuses sensor data (Xbox 360 Kinect v1 or standard USB webcams) with a hybrid LLM engine (local Ollama + cloud GPT-5-mini) to analyze and respond to human communication through eye contact patterns, facial expressions, and speech.
 
-At its core, HCEP implements Kirk LaSalle's HCEP (Human Conversation Eye Points) theory — a novel 5-mode cognitive-emotional classification system that decodes the rich, unspoken language of eye contact during face-to-face conversation.
+At its core, HCEP implements Kirk LaSalle's HCEP (Human Communication Eye Protocol) theory — a novel 5-mode cognitive-emotional classification system that decodes the rich, unspoken language of eye contact during face-to-face conversation.
 
 ### 1.1 Vision
 
