@@ -9,6 +9,12 @@ HCEP processes live visual and audio streams in real-time, calculates pupil/gaze
 
 ---
 
+## Screenshot
+
+![HCEP Dashboard Screenshot](docs/hcep-02_enhanced.png)
+
+---
+
 ## Repository Structure
 
 ```
