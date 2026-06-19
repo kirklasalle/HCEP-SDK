@@ -98,17 +98,17 @@ void AMyAvatarCharacter::Tick(float DeltaTime)
 ### True Gaze™ Parallax Calibration
 To eliminate gaze skewing caused by off-axis sensor placement (such as mounting a webcam on top of a monitor bezel), HCEP implements a dynamic 3D coordinate co-registration. This shifts tracking perspective from the sensor's lens center back to the active user-avatar focal line of sight:
 
-![True Gaze Parallax Calibration](docs/images/parallax_calibration.svg)
+![True Gaze Parallax Calibration](docs/images/parallax_calibration.svg?v=2)
 
 ### Cones of Vision & 13 Gaze Regions
 To classify communication modes, HCEP maps the user's focus direction across 13 distinct spatial sectors. The avatar casts virtual cones of vision from each eye socket, detecting mutual gaze (Spirit), social triangle transitions (Affect/Heart), forehead analytical focus (Logic), or averted gaze patterns (Think):
 
-![Telemetry Cones of Vision & 13 Regions](docs/images/cones_of_vision.svg)
+![Telemetry Cones of Vision & 13 Regions](docs/images/cones_of_vision.svg?v=2)
 
 ### Three-Stage Gaze Triangulation Geometry
 HCEP's mathematical engine determines the final gaze vector in three distinct pipeline stages: (1) head-pose estimation using an Efficient Perspective-n-Point (EPnP) solver optimized with Levenberg-Marquardt, (2) 3D coordinate mapping of eyeball center sockets relative to the face mesh, and (3) spherical projection of the pupil displacement vector ($\vec{v}$):
 
-![Three-Stage Gaze Triangulation Geometry](docs/images/gaze_geometry.svg)
+![Three-Stage Gaze Triangulation Geometry](docs/images/gaze_geometry.svg?v=2)
 
 ### True Gaze™ Parallax Simulator
 To test the spatial gaze geometry locally without launching the app, open the **True Gaze™ Parallax Simulator**:
